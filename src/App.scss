@@ -18,4 +18,34 @@ body {
       color: rgb(243, 243, 185);
     }
   }
+
+  .front {
+    background-color: #222;
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    .category {
+      margin-right: 0.5rem;
+      color: orange;
+    }
+  }
+  .back {
+    color: tomato;
+  }
+
+  .pageCategory {
+    select {
+      margin-top: 1rem;
+      padding: 0.4rem;
+      border-radius: 5px;
+      outline: none;
+
+      &:hover {
+        filter: brightness(80%);
+      }
+    }
+    select:focus {
+      border: none;
+    }
+  }
 }
