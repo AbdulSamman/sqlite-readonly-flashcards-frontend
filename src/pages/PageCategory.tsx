@@ -24,9 +24,9 @@ export const PageCategory = () => {
             handleChangeCurrentCategoryItemIdCode(e.target.value)
           }
         >
-          {categories.map((category) => {
+          {categories.map((category, i: number) => {
             return (
-              <option value={category.idCode} key={category.id}>
+              <option value={category.idCode} key={i}>
                 {category.name} (
                 {`${category.total} flashcard${
                   category.total === 1 ? "" : "s"
@@ -37,8 +37,8 @@ export const PageCategory = () => {
           })}
         </select>
         <div>
-          {currentCategoryFlashcards.map((flashcard) => {
-            return <FlashCard key={flashcard.id} flashCard={flashcard} />;
+          {currentCategoryFlashcards.map((flashCard) => {
+            return <FlashCard key={flashCard.id} flashCard={flashCard} />;
           })}
         </div>
       </div>
